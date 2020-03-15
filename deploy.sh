@@ -2,6 +2,6 @@
 
 git add -A
 message = $date + $1
-git commit -m '$message '
+git commit -m "\"$message \" "
 git push origin master
 echo message
