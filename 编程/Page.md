@@ -6,9 +6,13 @@
 
 分页库可帮助您一次加载和显示一小块数据。按需载入部分数据会减少网络带宽和系统资源的使用量。
 
+
+
 ![Page](./image/Page.png)
 
+### 逻辑
 
+![](./image/paging.webp)
 
 ### 核心步骤
 
@@ -38,5 +42,40 @@
 
 - ViewModel中不需要进行特殊设置。只做数据获取。
 
+- DataSource.Factory 有支持toLiveData的方法，并添加了config方便配置。
+
+  - pageSize = 10（每页个数）
+  - prefetchDistance = 6 （预加载前置数，相当于count-prefetchDistance进行预加载）
+  - enablePlaceholders = false（数据不完全苦丁，可能会跳动修改等，所以false不锁数据）
+  - initialLoadSizeHint = 30 (首次数据页码数))
+  - fetchExecutor = appExecutors.networkIO() 提供参数
+
+```kotlin
+fun cardOfBGBDPageSize(bgId:String, pageSize:Int): Listing<Card>{
+        val sourceFactoru = BGPageSizedDataSourceFactory(apiService)
+        val pagedList = sourceFactoru.toLiveData(
+            config = Config(
+                pageSize = 10,
+                prefetchDistance = 6,
+                enablePlaceholders = false,
+                initialLoadSizeHint = 30
+            ),
+            fetchExecutor = appExecutors.networkIO()
+        )
+        return Listing(
+            pagedList = pagedList,
+            networkState = sourceFactoru.sourceLiveData.switchMap {
+                it.initialLoad
+            }
+        )
+    }
+```
+
+
+
 ### 思考
 
+1. 列表分页已属于一级需求，基本有feed流必有
+2. 和ViewModel和LiveData一起，数据和生命周期解耦
+3. 可以配置参数实现预加载
+4. Paging的成熟度很高，官方提供的实现很高
