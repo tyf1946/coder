@@ -73,6 +73,14 @@ fun cardOfBGBDPageSize(bgId:String, pageSize:Int): Listing<Card>{
 
 
 
+- DataSource.Factory 工厂类。标准工程类优势。没特别的。
+- DataSource 核心是数据提供。数据提供更多的以镜像提供，所以镜像是不可更改的。Pagelist是不能进行添加或者删除修改的，事实上google的官方说明也说了DataSource的核心是loaded不更改，而未加载的时进行更改的，
+- DataSource提供了invalidate判断和方法，保证能够进行及时的刷新。这里配合使用Room或者Network的监听，是处理回调的比较好的实践模式
+- 在进行invalidate的时候，旧数据会被抛弃，新数据会刷新载入。但也因此，内存数据变动是大的。但由于性能的核心压力还是在UI刷新中。
+- 镜像模式能极大的保证数据的线程安全，减少界面同步的问题。
+
+
+
 ### 思考
 
 1. 列表分页已属于一级需求，基本有feed流必有
