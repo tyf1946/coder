@@ -26,6 +26,8 @@
 
 [聊聊androidx.lifecycle](./编程/聊聊androidx.lifecycle.md)
 
+[RecycleView和Lifecycle如何使用观察数据](./编程/RecycleView和Lifecycle如何使用观察数据.md)
+
 ### 管理、团队、目标
 
 [管理——高效会议一些想法](./管理/管理——高效会议一些想法.md)
