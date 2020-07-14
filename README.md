@@ -28,6 +28,8 @@
 
 [RecycleView和Lifecycle如何使用观察数据](./编程/RecycleView和Lifecycle如何使用观察数据.md)
 
+[LiveData , DataBinding以及场景](./编程/LiveData , DataBinding以及场景.md)
+
 ### 管理、团队、目标
 
 [管理——高效会议一些想法](./管理/管理——高效会议一些想法.md)
