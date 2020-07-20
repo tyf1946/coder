@@ -30,6 +30,8 @@
 
 [LiveData , DataBinding以及场景](./编程/LiveData , DataBinding以及场景.md)
 
+[Jetpack疑难杂症以及解决方法](./编程/Jetpack疑难杂症以及解决方法.md)
+
 ### 管理、团队、目标
 
 [管理——高效会议一些想法](./管理/管理——高效会议一些想法.md)
