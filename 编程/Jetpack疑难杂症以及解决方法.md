@@ -1,4 +1,4 @@
-# Jetpack疑难杂症以及解决方法
+# Jetpack-Navigation疑难杂症以及解决方法
 
 ~~[Navigation修改版-避免生命周期重复回调](https://juejin.im/post/5ed75d6d6fb9a047ff1ab407)~~
 
