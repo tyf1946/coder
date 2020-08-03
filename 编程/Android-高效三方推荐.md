@@ -36,7 +36,15 @@ Android的三方Github上真的非常多，优秀的收集库也很多。
 
 
 
+加密和签名
 
+https://github.com/DimaKoz/stunning-signature
+
+
+
+判断虚拟机
+
+https://github.com/framgia/android-emulator-detector
 
 ### UI和影音
 

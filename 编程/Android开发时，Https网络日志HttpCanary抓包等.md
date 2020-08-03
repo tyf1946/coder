@@ -15,3 +15,8 @@ Https, ssl/tls 属于加密。CA作为签名认证。
 mac-charles 算是mac电脑上非常有效的抓包工具了。比较通用不详细介绍了。
 
 今天重点介绍一下：HttpCanary抓包，Android的app，由于国内的一些原因，现在只能在google-play上下载。
+
+
+
+
+
